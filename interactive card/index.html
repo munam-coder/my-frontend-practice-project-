@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Left Side (Card Graphics) -->
+    <div class="left">
+      <div class="background-image">
+        <img src="bg-main-desktop.png" alt="" class="desktop">
+        <img src="bg-main-mobile.png" alt="" class="mobile">
+      </div>
+
+      <div class="back">
+        <div class="number-back">295</div>
+        <img src="bg-card-back.png" alt="" class="back-mobile">
+      </div>
+
+      <div class="front">
+        <div class="circle"></div>
+        <div class="small-circle"></div>
+        <div class="number">
+          <p>1234 5467 2395 7097</p>
+        </div>
+        <div class="name">
+          <p>Jane Appleseed</p>
+          <p>25/26</p>
+        </div>
+        <img src="bg-card-front.png" alt="" class="front-desktop">
+        <img src="bg-card-front.png" alt="" class="front-mobile">
+      </div>
+    </div>
+
+    <!-- Right Side (Form Section) -->
+    <div class="right">
+      <div class="forms">
+        <form action="" class="credit-card-form">
+          <label for="cardholder-name">CARDHOLDER NAME</label>
+          <input type="text" id="cardholder-name" placeholder="e.g. Jane Appleseed" />
+
+          <label for="card-number">CARD NUMBER</label>
+          <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000" />
+
+          <div class="row">
+            <div class="exp-date">
+              <label id="exp">Exp. Date (MM/YY)</label>
+              <div class="input-row">
+                <input type="text" id="MM" placeholder="MM" maxlength="2" />
+                <input type="text" id="YY" placeholder="YY" maxlength="2" />
+              </div>
+            </div>
+            <div class="CVC">
+              <label for="CVC" id="cv">CVC</label>
+              <input type="text" id="CVC" placeholder="e.g. 123" />
+            </div>
+          </div>
+
+          <button type="submit" id="Confirm">Confirm</button>
+        </form>
+      </div>
+    </div>
+    <div id="thank-you" class="hidden">
+      <img src="icon-complete.svg" alt="Complete" />
+      <h2>Thank You!</h2>
+      <p>We’ve added your card details</p>
+      <button id="continue">Continue</button>
+    </div>
+  </div>
+  <script src="scipt.js"></script>
+</body>
+</html>
