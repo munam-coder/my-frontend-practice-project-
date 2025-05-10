@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    display: flex;
+    gap: 3vw;
+    
+}
+.right ul {
+    display: flex;
+    gap: 2.5vw; 
+    align-items: center;
+    cursor: pointer;
+    margin-top: 32px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Epilogue;
+    color: hsl(0, 0%, 41%) ;
+    
+}
+
+.right ul li{
+    list-style: none;
+}
+.logo{
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.left{
+    display: flex;
+    gap: 26px;
+    margin-top: 35px;
+    margin-right: 33px;
+}
+
+.dropdown-toggle{
+    background: none;
+    border: none;
+    color: hsl(0, 0%, 41%) ;
+    font-family: Epilogue ;
+    font-size: 15px ;
+    font-weight: 500;
+    cursor: pointer;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    cursor: pointer;
+
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .ul:hover{
+    color: hsl(0, 0%, 0%);
+   
+    
+  }
+  
+.menu{
+    display: none;
+}
+
+.login{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: Epilogue;
+    font-size: 15px;
+    color: hsl(0, 0%, 41%);
+    
+
+}
+    
+.rigester{
+    background: none;
+    border: 1px solid hsl(0, 0%, 41%);
+    cursor: pointer;
+    border-radius: 11px;
+    width: 5vw;
+    text-align: center;
+    font-size: 12px;
+    color: hsl(0, 0%, 41%);
+}
+
+.container{
+    display: flex;
+    gap: 200px;
+
+}
+
+.left-main{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 50px;
+}
+.left-h1{
+    margin-top: 10vh;
+    margin-left: 10vw;
+    font-size: 45px;
+    font-family: Epilogue;
+    font-weight: 800;
+}
+
+.mobile-h1{
+    display: none;
+}
+.para{
+    font-size: 18px;
+    line-height: 25px;
+    font-family: Epilogue ;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    transform: translateX(136px);
+}
+
+.learn-more{
+    width: 8vw;
+    height: 7vh;
+    transform: translateX(136px);
+    background-color: hsl(0, 0%, 8%);
+    border: none;
+    border-radius: 7px;
+    font-family: Epilogue;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    color: hsl(0, 0%, 98%);
+}
+
+.logos-ex{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    transform: translateX(136px);
+}
+
+.right-desltop-img{
+margin-top: 50px;
+}
+
+.mobile-img{
+    display: none;
+}
+/* desktop complete */
+
+@media (max-width:600px) {
+   
+        .ul, .left {
+            display: none;
+        }
+     
+        .menu {
+            display: inline-flex;
+            position: absolute;
+            z-index: 1;
+            transform: translateX(65vw);
+        }
+     
+        .right-desltop-img {
+            display: none;
+        }
+     
+        .mobile-img {
+            display: block;
+            margin-top: 30px;
+            object-fit: cover;
+        }
+     
+        .container {
+            flex-direction: column;
+            gap: 0;
+        }
+     
+        .left-main {
+            text-align: center;
+            align-items: center;
+            margin: 40px 20px 0;
+            padding: 0 10px;
+            gap: 25px;
+        }
+     
+        .left-h1 {
+            font-size: 20px;
+            font-family: Epilogue;
+            font-weight: 800;
+            margin: 0;
+        }
+     
+        .left-h1 br {
+            display: none;
+        }
+     
+        .para {
+            font-size: 16px;
+            line-height: 24px;
+            font-family: Epilogue;
+            font-weight: 500;
+            color: hsl(0, 0%, 41%);
+            transform: none;
+            text-align: center;
+        }
+     
+        .para br {
+            display: none;
+        }
+     
+        .learn-more {
+            width: 140px;
+            height: 40px;
+            background-color: hsl(0, 0%, 8%);
+            border: none;
+            border-radius: 7px;
+            font-family: Epilogue;
+            font-size: 15px;
+            color: hsl(0, 0%, 98%);
+            cursor: pointer;
+            margin: 0 auto; /* Center horizontally */
+            display: block;
+            transform: translateX(-10px);
+            
+        }
+     
+        .logos-ex {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            transform: none;
+            margin-top: 20px;
+        }
+     }
+     
+
+
+
