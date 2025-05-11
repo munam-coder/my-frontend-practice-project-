@@ -15,7 +15,7 @@ nav{
 }
 .right ul {
     display: flex;
-    gap: 2.5vw; 
+    gap: 4vw; 
     align-items: center;
     cursor: pointer;
     margin-top: 32px;
@@ -41,35 +41,70 @@ nav{
     margin-right: 33px;
 }
 
-.dropdown-toggle{
+.ul{
+   
+}
+
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
     background: none;
     border: none;
-    color: hsl(0, 0%, 41%) ;
-    font-family: Epilogue ;
-    font-size: 15px ;
-    font-weight: 500;
+    font-family: Epilogue;
+    font-size: 15px;
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
-}
-.dropdown-menu {
+  }
+  
+  .dropdown-menu {
     display: none;
+    flex-direction: column;
+    gap: 10px;
     position: absolute;
+    top: 35px;
+    left: 0;
     background-color: white;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    cursor: pointer;
-
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: Epilogue;
+    font-size: 14px;
+    min-width: 150px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li {
+    list-style: none;
+  }
+  
+  .dropdown-menu a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    transition: color 0.3s;
+  }
+  
+  .dropdown-menu a:hover {
+    color: hsl(0, 0%, 8%);
   }
   
   .dropdown-menu.show {
-    display: block;
+    display: flex;
   }
 
-  .ul:hover{
-    color: hsl(0, 0%, 0%);
+  .featimg{
+    margin-right: 2px;
+  }
+  
+
+
    
     
-  }
+  
   
 .menu{
     display: none;
