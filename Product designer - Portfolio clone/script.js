@@ -2,6 +2,9 @@ const scroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true
 });
+
+var timeout;
+
 function firstpageAnim() {
   let tl = gsap.timeline();
 
@@ -36,7 +39,7 @@ function circlechaptkarlo() {
   let yprev = 0;
   window.addEventListener("mousemove", function (dets) {
 
-
+    clearTimeout(timeout);
 
         xscale =gsap.utils.clamp(.8,1.2,  dets.clientX - xprev);
         yscale = gsap.utils.clamp(.8,1.2, dets.clientY - yprev);
@@ -45,6 +48,12 @@ function circlechaptkarlo() {
     xprev = dets.clientX;
 
     circleMouseFollower(xscale, yscale);
+
+  timeout =  setTimeout(function(){
+       document.querySelector(
+      ".minicircel"
+    ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)  scale(1, 1) `;
+    })
   })
 }
 circlechaptkarlo();
@@ -54,7 +63,37 @@ function circleMouseFollower(xscale, yscale) {
     document.querySelector(
       ".minicircel"
     ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)  scale(${xscale}, ${yscale}) `;
+
+    
   });
+
 }
 firstpageAnim()
 circleMouseFollower();
+
+
+
+document.querySelectorAll(".elem")
+.forEach(function (elem){
+let roatate = 0;
+let diffrot = 0;
+
+
+
+
+  elem.addEventListener("mousemove", function (details) {
+    let diff = (details.clientY - elem.getBoundingClientRect().top)
+    diffrot = details.clientX - roatate;
+    roatate = details.clientX
+
+  
+   gsap.to(elem.querySelector("img"), {
+    opacity: 1,
+    ease: Power3,
+    top: diff,
+    left: details.clientX,
+    roatate: gsap.utils.clamp(-20, 20, diffrot),
+   
+   }) 
+  })
+})
