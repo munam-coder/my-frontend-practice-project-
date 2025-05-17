@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+  </style>
+</head>
+<body>
+  <main>
+    <div class="backgroundimg">
+      <img src="./todo-app-main/images/bg-desktop-dark.jpg" alt="Background Image" />
+    </div>
+
+    <div class="app">
+      <div class="headingtodo">
+        <h2>TODO</h2>
+      </div>
+
+      <!-- ✅ Input field -->
+      <div class="addtodo">
+        <input type="text" placeholder="Create a new todo..." class="addto" id="todo-input" />
+      </div>
+
+      <!-- ✅ Todo list area -->
+      <div class="todolist-container">
+        <div class="todolist" id="todo-list">
+          <!-- JS adds todos here -->
+        
+
+        <!-- ✅ Filters -->
+        <div class="filters">
+          <p><span id="items-left">0</span> items left</p>
+          <div class="filter-buttons">
+            <button class="filter active">All</button>
+            <button class="filter">Active</button>
+            <button class="filter">Completed</button>
+          </div>
+          <button class="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </main

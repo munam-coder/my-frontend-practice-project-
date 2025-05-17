@@ -1,0 +1,131 @@
+body {
+    background-color: hsl(235, 21%, 11%);
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.backgroundimg img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.app {
+    position: relative;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headingtodo h2 {
+    font-size: 2.5rem;
+    letter-spacing: 12px;
+    color: white;
+}
+
+.addtodo {
+    margin: 20px 0;
+}
+
+.addto {
+    width: 28vw;
+    height: 50px;
+    margin-left: 2px;
+    padding-left: 20px;
+    background-color: hsl(235, 24%, 19%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.todolist-container {
+    width: 30vw;
+}
+
+.todolist {
+    height: 55vh;
+    width: 30vw;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(234, 11%, 52%);
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.checked {
+    background: url('./todo-app-main/images/icon-check.svg') no-repeat center,
+        linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-size: 12px, cover;
+}
+
+.todo-text {
+    flex: 1;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: hsl(234, 11%, 52%);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 268px;
+    padding: 10px 0;
+    color: hsl(234, 11%, 52%);
+}
+
+.filters p{
+   margin-left: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-buttons button,
+.clear-completed {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.filter.active {
+    color: hsl(220, 98%, 61%);
+}
