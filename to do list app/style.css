@@ -28,6 +28,7 @@ body {
     font-size: 2.5rem;
     letter-spacing: 12px;
     color: white;
+    margin-right: 18vw;
 }
 
 .addtodo {
@@ -129,3 +130,4 @@ body {
 .filter.active {
     color: hsl(220, 98%, 61%);
 }
+
