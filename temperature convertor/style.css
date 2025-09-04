@@ -1,0 +1,147 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.converter-container,
+.result-container {
+  border: 2px solid #222;
+  border-radius: 20px;
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 45px 30px 32px 30px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #444;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  flex-wrap: nowrap; /* Prevent wrapping, keep in row */
+}
+
+.input-field {
+  width: 120px;
+  padding: 14px 18px;
+  border: 2px solid #222;
+  border-radius: 14px;
+  font-size: 1.4rem;
+  outline: none;
+  transition: border 0.2s;
+  text-align: center;
+  background: #fff;
+}
+
+.input-field:focus {
+  border-color: #000;
+}
+
+.select-wrapper {
+  position: relative;
+  min-width: 162px;
+}
+
+.select-field {
+  width: 100%;
+  padding: 14px 35px 14px 18px;
+  border: 2px solid #222;
+  border-radius: 14px;
+  font-size: 1.3rem;
+  appearance: none;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.select-field:focus {
+  border-color: #000;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+
+.convert-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.3rem;
+  padding: 14px 32px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.convert-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.hint {
+  text-align: right;
+  font-size: 1.19rem;
+  color: #222;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.result-container {
+  margin-top: 28px;
+  padding-top: 34px;
+}
+
+.result-form .input-field,
+.result-form .select-wrapper {
+  opacity: 1;
+}
+
+.result-form .select-field:disabled {
+  color: #111;
+  background: #e8e8e8;
+}
+
+.conversion-result {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  color: #338a2f;
+  font-weight: 500;
+  text-align: left;
+}
+
+.conversion-result.success {
+  color: #338a2f;
+}
+
+
+.result{
+    color: #338a2f;
+    
+}
